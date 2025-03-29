@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    
+    <style>
+video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content-container {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .start-button {
+            padding: 15px 20px;
+            font-size: 18px;
+            color: white;
+            background:  #5EA51D;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.35s ease, box-shadow 0.3s ease;
+            margin-top: 350px;
+        }
+
+        .start-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px #000F22;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full Page Background */
+        body {
+            background: #000F22;
+            color: white;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #163742;
+            padding: 15px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 220px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 40px;
+            left: 0;
+            list-style: none;
+            width: 180px;
+            border-radius: 5px;
+            padding: 10px 0;
+        }
+
+        .dropdown-menu li {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .dropdown-menu a {
+            color: white;
+            font-size: 16px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Call to Action Button */
+        .strt {
+            background-color: #5EA51D;
+            color: white;
+            padding: 12px 35px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+
+        /* Icon Styling */
+        .icon a {
+            color: white;
+            font-size: 24px;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 90%;
+            max-width: 1800px;
+            height: 90vh;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px;
+            margin: 100px auto 20px;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Background Carousel */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 25px;
+            animation: backgroundChange 12s infinite;
+        }
+
+        @keyframes backgroundChange {
+            0% { background-image: url('https://www.lbcc.edu/sites/main/files/imagecache/lightbox/main-images/cos_adult_ed.jpg'); }
+            33% { background-image: url('https://www.brickmarketing.com/wp-content/uploads/2022/10/digital-marketing-1.jpg'); }
+            66% { background-image: url('https://contentwriters.com/blog/wp-content/uploads/PPC2018.jpg'); }
+            100% { background-image: url(banner-video-shape.png); }
+        }
+
+        /* Green Gradient Overlay (Wider) */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%; /* Increased width */
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 100, 0, 0.7), transparent);
+            border-radius: 25px;
+        }
+
+        /* Content Section */
+        .content {
+            position: relative;
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .content h2 {
+        
+        color: white;
+        padding: 12px 0px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+        justify-content: center;
+        margin-top: 230px;
+    }
+        .content h1 {
+            font-size: 70px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* Call-to-action Buttons */
+        .cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cta .btn {
+            background: #5EA51D;
+            color: rgb(255, 255, 255);
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta .phone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+
+        .cta .phone-icon {
+            width: 40px;
+            height: 40px;
+            background: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+                padding: 40px 20px;
+            }
+
+            .overlay {
+                width: 100%;
+            }
+
+            .content {
+                max-width: 100%;
+            }
+
+            .cta {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        .about-us, .about-content, .about-images, .stats {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When Page Loads */
+.loaded .about-us, 
+.loaded .about-content, 
+.loaded .about-images, 
+.loaded .stats {
+    opacity: 1;
+    transform: translateY(0);
+}
+        .about-us {
+    background-color: #000F22;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left-aligned Content */
+.about-content {
+    flex: 1;
+    min-width: 700px;
+    text-align: left;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 170px;
+}
+
+/* Tag Styling */
+.about-tag {
+    color: #5EA51D;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+/* Small Image Next to Paragraph */
+.text-image-container {
+    display: flex;
+    align-items: center;
+    gap: 70px; /* Space between image and text */
+}
+
+.small-img {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Button Styling */
+.btn {
+    
+    color: white;
+    padding: 10px 20px; /* Adjusted padding for reduced width */
+    width: auto; /* Ensures the button width adjusts to content */
+    min-width: 150px; /* Sets a minimum width */
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Slightly reduced font size */
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Right-aligned Big Image */
+.about-images {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.big-img {
+    width: 420px;
+    height: 700px; /* Increased height */
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.stat h3 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #5EA51D;
+    margin-bottom: 5px;
+}
+
+.stat p {
+    font-size: 20px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: left;
+        gap: 30px;
+    }
+
+    .about-images {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .big-img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .stat h3 {
+        font-size: 40px;
+    }
+
+    .stat p {
+        font-size: 18px;
+    }
+}
+.video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1500px;
+            max-height: 450px; /* ⬇ Reduced height */
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        video {
+            width: 100%;
+            height: 100%; /* Fit inside container */
+            object-fit: cover; /* Maintain aspect ratio */
+            display: block;
+            border-radius: 15px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 128, 0, 0.7), rgba(0, 128, 0, 0));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px;
+            color: white;
+        }
+
+        .overlay h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 16px;
+            max-width: 400px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            width: 50px; /* ⬇ Reduced */
+            height: 50px; /* ⬇ Reduced */
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .play-button::before {
+            content: "▶";
+            font-size: 20px; /* ⬇ Reduced */
+            color: white;
+        }
+
+        /* ✅ Mobile Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                display: block;
+                padding: 20px 0;
+            }
+
+            .video-container {
+                width: 95%;
+                max-height: 300px; /* ⬇ Reduced further for mobile */
+            }
+
+            .overlay {
+                padding: 20px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .overlay h2 {
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .overlay p {
+                font-size: 14px;
+                max-width: 100%;
+            }
+
+            .play-button {
+                width: 40px;
+                height: 40px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .play-button::before {
+                font-size: 16px;
+            }
+        }
+.services-container {
+            max-width: 1200px;
+            margin: auto;
+            text-align: left;
+            
+        }
+        .services-container h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .services-container p {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #5EA51D;
+        }
+        .service-cards {
+            display: flex;
+            gap: 90px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .service-card {
+    background: #0F1C2E;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    min-height: 400px; /* Ensures consistent height */
+    transition: 0.3s;
+    text-align: center; /* Centers text */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    gap: 50px;
+}
+        .service-card:hover {
+            background: #5EA51D;
+        }
+        .service-card h3 {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+        .service-card p {
+            font-size: 14px;
+            color: #bbb;
+        }
+        .service-card .icon {
+            font-size: 40px;
+            color: #5EA51D;
+        }
+        .service-card:hover .icon {
+            color: white;
+        }
+        .service-card .arrow {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 20px;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .awards-section {
+    width: 80%;
+    max-width: 1200px;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 140px;
+}
+
+/* Title & Subtitle */
+.section-tag {
+    color: #5EA51D;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Awards Container */
+.awards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+
+/* Award Item */
+.award-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.award-year {
+    color: #31A24C;
+    font-size: 18px;
+    font-weight: bold;
+    width: 10%;
+}
+
+.award-title {
+    font-size: 22px;
+    font-weight: bold;
+    width: 30%;
+}
+
+.award-description {
+    font-size: 14px;
+    color: #9CA3AF;
+    width: 45%;
+}
+
+.arrow-link {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.arrow-link:hover {
+    background: white;
+    color: #0C162D;
+}
+
+/* History Button */
+.history-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #31A24C;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.history-btn:hover {
+    background: #25913A;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .awards-container {
+        flex-direction: column;
+    }
+
+    .award-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .award-year, .award-title, .award-description {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+    /* Testimonials Section */
+    .testimonials {
+        width: 90%;
+        max-width: 1200px;
+        text-align: left;
+        margin-left: 140px;
+        margin-top: 40px;
+        }
+    
+    /* Section Header */
+    .section-tag {
+        color: #5EA51D;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .section-title {
+        font-size: 42px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    
+    /* Testimonial Content Layout */
+    .testimonial-content {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    /* Left Review Box */
+    .reviews-box {
+        background: #31A24C;
+        padding: 25px;
+        border-radius: 10px;
+        width: 40%;
+        text-align: center;
+        height: 300px;
+    }
+    
+    /* Client Review Header */
+    .review-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .profile-pictures {
+        display: flex;
+    }
+    
+    .profile-pictures img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid white;
+        margin-left: -10px;
+    }
+    
+    .review-count {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .review-count span {
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    /* Review Statistics */
+    .review-stat {
+        margin-top: 50px;
+    }
+    
+    .review-stat h2 {
+        font-size: 48px;
+        margin: 0;
+    }
+    
+    .review-stat p {
+        font-size: 14px;
+        margin: 5px 0 0;
+    }
+    
+    /* Right Testimonial Slider */
+    .testimonial-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    width: 60%;
+    overflow: hidden;
+    height: 750px; /* Increase height */
+}
+
+    
+    /* Swiper Styling */
+    .swiper {
+        width: 100%;
+        height: auto;
+    }
+    
+    .swiper-slide {
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200%; /* Ensures it fills the container */
+}
+    
+    .stars {
+        color: #5EA51D;
+        font-size: 18px;
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+        font-style: italic;
+        margin: 15px 0;
+    }
+    
+    .testimonial-author {
+        color: #31A24C;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .testimonial-role {
+        font-size: 14px;
+        color: #9CA3AF;
+    }
+    
+    /* Swiper Pagination */
+    .swiper-pagination {
+        position: relative;
+        margin-top: 10px;
+    }
+    
+    .swiper-pagination-bullet {
+        background: #5EA51D;
+        opacity: 0.7;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background: #fff;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .testimonial-content {
+            flex-direction: column;
+        }
+    
+        .reviews-box, .testimonial-box {
+            width: 100%;
+        }
+    
+        .profile-pictures img {
+            width: 35px;
+            height: 35px;
+        }
+    }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            position: relative;
+            width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #0D1B34;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .team-member img {
+            width: 100%;
+            border-bottom: 4px solid #5EA51D;
+        }
+        .team-info {
+            padding: 15px;
+        }
+        .team-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .team-role {
+            font-size: 14px;
+            color: #5EA51D;
+            margin-top: 5px;
+        }
+        .team-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 128, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .team-member:hover .team-overlay {
+            opacity: 1;
+        }
+        .overlay-icon {
+            background: white;
+            color: #5EA51D;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            max-width: 1600px;
+            margin: auto;
+            padding: 50px 20px;
+            height: 800px;
+        }
+        .contact-info, .contact-form {
+            flex: 1;
+            padding: 40px;
+        }
+        .contact-info {
+            background: #0C162D;
+        }
+        .contact-info h2 {
+            font-size: 46px;
+            margin-top: 50px                    ;
+        }
+        .contact-info p {
+            font-size: 16px;
+            color: #5EA51D;
+            margin-top: 20px;
+        }
+        .contact-details {
+    margin-top: 70px;
+    font-size: 25px;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.contact-left, .contact-right {
+    width: 48%;
+}
+
+.contact-info strong {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-details div {
+    margin-bottom: 15px;
+}
+        .contact-form {
+            background: #31A24C;
+            border-radius: 10px;
+            gap: 20px   ;
+        }
+        .contact-form h2 {
+            color: white;
+            font-size: 48px;
+        }
+        .contact-form p {
+            font-size: 24px;
+            color: white;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .send-btn {
+            background: #0C162D;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .send-btn:hover {
+            background: #0A1222;
+        }
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+            }
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            background-color: #0b1a2a;
+        }
+        .footer-column {
+            width: 30%;
+        }
+        .footer h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .newsletter {
+            display: flex;
+            align-items: center;
+        }
+        .newsletter input {
+            padding: 8px;
+            width: 80%;
+            border: none;
+            border-radius: 4px;
+        }
+        .newsletter button {
+            padding: 8px 12px;
+            border: none;
+            background: green;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .footer-bottom {
+            background: green;
+            text-align: center;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+ <video autoplay loop muted>
+        <source src="bg video.mp4" type="video/mp4">
+        
+    </video>
+    
+    <div class="content-container">
+        <button class="start-button" onclick="startHomePage()">Start Home Page</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo"><img src="logo-stackly (1).png" alt="logo"></div>
+
+        <div class="hamburger">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Solution ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Branding</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Resource</a></li>
+            <div class="icon"><a href="#"><i class="fab fa-codepen"></i></a></div>
+            <button class="strt">Let's Talk</button>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="overlay"></div>
+
+        <div class="content">
+            <h2># Best Digital Agency</h2>
+            <h1>Empowering Your Digital Future</h1>
+            <p>Sell the solution, not the product - because problems don’t search for brands, they search for answers</p>
+            
+            <div class="cta">
+                <a href="#" class="btn">Let's Get Started →</a>
+                <div class="phone">
+                    <div class="phone-icon">📞</div>
+                    +1 (123) 456 7890
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="about-us">
+        <div class="container">
+            <!-- Left-aligned Text Content -->
+            <div class="about-content">
+                <span class="about-tag">[ ABOUT US ]</span>
+                <h2>Empowering Your Brand with Cutting-Edge Digital Marketing</h2>
+                
+                <div class="text-image-container">
+                    <img src="small image.jpg" 
+                         alt="Business People" class="small-img">
+                    <p>At Stackly, we deliver data-driven digital marketing to boost your brand and drive results. From SEO to PPC and social media, we help businesses grow online. </p>
+                </div>
+    
+                <a href="#" class="btn">Let's Get Started →</a>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>240+</h3>
+                        <p>Business People</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Customer Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Right-aligned Big Image -->
+            <div class="about-images">
+                <img src="big image.jpg" 
+                     alt="Team Work" class="big-img">
+            </div>
+        </div>
+    
+        <!-- Stats Section -->
+        
+    </section>
+    <div class="services-container">
+        <p>[ OUR SERVICES ]</p>
+        <h2>Our Marketing Services</h2>
+        <p>At Stackly, we drive brand growth with SEO, social media, PPC, and content marketing. Boost visibility, engagement, and conversions effortlessly!</p>
+
+        <div class="service-cards">
+            <div class="service-card">
+                <i class="icon fas fa-chart-line"></i>
+                <h3>Digital Marketing Strategies</h3>
+                <p>We specialize in creating custom, responsive websites tailored to your business objectives.</p>
+                <span class="arrow">→</span>
+            </div>
+
+            <div class="service-card" style="background: #5EA51D; color: white;">
+                <i class="icon fas fa-cogs"></i>
+                <h3>Digital Content Management</h3>
+                <p>We specialize in creating custom, responsive websites tailored to your business objectives.</p>
+                <span class="arrow">→</span>
+            </div>
+
+            <div class="service-card">
+                <i class="icon fas fa-database"></i>
+                <h3>Digital Data Synchronization</h3>
+                <p>We specialize in creating custom, responsive websites tailored to your business objectives.</p>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <video src="video bg.mp4" autoplay muted loop poster="your-thumbnail.jpg"></video>
+        <div class="overlay">
+            <div class="play-button"></div>
+            <h2>We Provide Brilliant Ideas & The Digital Agency</h2>
+            <p>Imagine reaching deep inside you for all the strength and wisdom that you need to make this decision today.</p>
+        </div>
+    </div>
+
+    <section class="awards-section">
+        <p class="section-tag">[ OUR ACHIEVEMENT AWARDS ]</p>
+        <h1 class="section-title">Check Our Awards<br>And Achievement</h1>
+        <div class="awards-container">
+            <div class="award-item">
+                <span class="award-year">[2020]</span>
+                <h3 class="award-title">CSS Design Awards</h3>
+                <p class="award-description">Some people will tell you there are four while others may tell you there are eight thing.</p>
+                <a href="#" class="arrow-link">→</a>
+            </div>
+            <div class="award-item">
+                <span class="award-year">[2021]</span>
+                <h3 class="award-title">Good Design Award</h3>
+                <p class="award-description">Some people will tell you there are four while others may tell you there are eight thing.</p>
+                <a href="#" class="arrow-link">→</a>
+            </div>
+            <div class="award-item">
+                <span class="award-year">[2022]</span>
+                <h3 class="award-title">Top Design King</h3>
+                <p class="award-description">Some people will tell you there are four while others may tell you there are eight thing.</p>
+                <a href="#" class="arrow-link">→</a>
+            </div>
+            <div class="award-item">
+                <span class="award-year">[2023]</span>
+                <h3 class="award-title">Web Design Dev</h3>
+                <p class="award-description">Some people will tell you there are four while others may tell you there are eight thing.</p>
+                <a href="#" class="arrow-link">→</a>
+            </div>
+        </div>
+        <a href="#" class="history-btn">Our History →</a>
+    </section>
+    <h2>Meet Our Friendly Team Member</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="tema-img-03.jpg" alt="Team Member">
+            <div class="overlay"></div>
+            <div class="info">
+                <h3>Paul Flavius</h3>
+                <p>Coordinator</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="tema-img-05.jpg" alt="Team Member">
+            <div class="overlay"></div>
+            <div class="info">
+                <h3>Mellissa Doe</h3>
+                <p>Analyst</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="tema-img-04 (1).jpg" alt="Team Member">
+            <div class="overlay"></div>
+            <div class="info">
+                <h3>Demon Cats</h3>
+                <p>President</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="tema-img-01.jpg" alt="Team Member">
+            <div class="overlay"></div>
+            <div class="info">
+                <h3>Simmy Flavius</h3>
+                <p>Vice President</p>
+            </div>
+        </div>
+    </div>
+    <section class="testimonials">
+        <p class="section-tag">[ Testimonials ]</p>
+        <h1 class="section-title">Read What Our Clients<br>Say About Our Work</h1>
+        <div class="testimonial-content">
+            
+            <!-- Left Review Box -->
+            <div class="reviews-box">
+                <div class="review-header">
+                    <div class="profile-pictures">
+                        <img src="tema-img-01.jpg" alt="User 1">
+                        <img src="tema-img-03.jpg" alt="User 2">
+                        <img src="tema-img-05.jpg" alt="User 3">
+                    </div>
+                    <p class="review-count">1,000+ <br><span>Client Reviews</span></p>
+                </div>
+                <div class="review-stat">
+                    <h2>98%</h2>
+                    <p>Customers are satisfied with our services.</p>
+                </div>
+            </div>
+
+            <!-- Right Testimonial Slider -->
+            <div class="testimonial-box swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            So how do we get clarity? Simply by asking ourselves lots of questions:  
+                            <i>What do I really want? What does success look like to me?</i>
+                        </p>
+                        <p class="testimonial-author">Simon Cyrene</p>
+                        <p class="testimonial-role">Manager</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            Clarity is power. The more clear you are about your goals, the easier it is to achieve them.
+                        </p>
+                        <p class="testimonial-author">John Doe</p>
+                        <p class="testimonial-role">CEO, Tech Solutions</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            Always keep learning and improving. Growth is a continuous process.
+                        </p>
+                        <p class="testimonial-author">Emma Watson</p>
+                        <p class="testimonial-role">Product Designer</p>
+                    </div>
+
+                </div>
+
+                <!-- Pagination & Navigation -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section>
+    <div class="contact-section">
+        <div class="contact-info">
+            <p>[ GET IN TOUCH ]</p>
+            <h2>Have Questions? We Are Always Here to Help!</h2>
+            <p>Get the oars in the water and start rowing. Execution is the single biggest factor in achievement, the quicker you get to the goals!</p>
+            <div class="contact-details">
+                <div class="contact-row">
+                    <div class="contact-left">
+                        <strong>Call Center:</strong><br>123 456-7890<br>+ (000) 123-456-7890
+                    </div>
+                    <div class="contact-right">
+                        <strong>Our Location:</strong><br>214 West Arnold St. New York, NY 10002
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-left">
+                        <strong>Email:</strong><br><a href="mailto:sample@example.com" style="color: #5EA51D;">sample@example.com</a>
+                    </div>
+                    <div class="contact-right">
+                        <strong>Social Network:</strong><br>FA. X. DR. BE.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>How May We Help You?</h2>
+            <p>Please fill out the form below with your details and message, and our team will get back to you as soon as possible.</p>
+            <form>
+                <input type="text" placeholder="Name*" required>
+                <input type="email" placeholder="Email*" required>
+                <input type="text" placeholder="Subject*" required>
+                <textarea placeholder="Write Message" required></textarea>
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-column">
+           <img src="logo-stackly (1).png" alt="">
+            <p>info@example.com</p>
+            <p>+1 (123) 456 7890</p>
+            <p>7164 Barton Terrace, Vermont - 97879, USA</p>
+            <strong>1-800-555-500</strong>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Our History</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>Sign up to our Newsletter to get the latest news and offers.</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Enter Your Email">
+                <button>→</button>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        Develop and design by <a href="#" style="color:white; text-decoration: underline;">The Stackly</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile Navbar Toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+        counter.innerText = "0";
+
+        const updateCounter = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+
+            const increment = target / 200; // Adjust speed
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCounter, 10);
+            } else {
+                counter.innerText = target + (target === 100 ? "%" : ""); // Add % only for 100%
+            }
+        };
+
+        updateCounter();
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add("loaded");
+    });
+    var swiper = new Swiper(".mySwiper", {
+            loop: true, // Infinite Loop
+            autoplay: {
+                delay: 3000, // Auto-slide every 3 seconds
+                disableOnInteraction: false, // Keep autoplay after user interaction
+            },
+            speed: 800, // Smooth transition speed
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+function startHomePage() {
+            window.location.href = "test.html"; // Change to your home page URL
+        }
+    </script>
+
+</body>
+</html>
